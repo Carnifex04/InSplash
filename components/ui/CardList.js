@@ -51,6 +51,7 @@ export default function CardList({
 		>
 			{/* Left component (Image) */}
 			<div
+				id="uniqueDivId"
 				style={{
 					width: "40%", // Set the width for the image
 					height: "20rem",
@@ -67,6 +68,21 @@ export default function CardList({
 						objectFit: "cover",
 					}}
 				/>
+				<style>
+					{`
+						@media (max-width: 1023px) {
+							#uniqueDivId {
+							width: 60%; // Set a different width for medium screens
+							}
+						}
+
+						@media (max-width: 767px) {
+							#uniqueDivId {
+							width: 80%; // Set a different width for small screens
+							}
+						}
+					`}
+				</style>
 			</div>
 
 			{/* Right component (Information) */}
