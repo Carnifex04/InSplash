@@ -21,7 +21,11 @@ export default function Header({ section }) {
 				<div>
 					<Link
 						href="/"
-						style={{ fontSize: "1.5rem", fontWeight: "600" }}
+						style={{
+							fontSize: "1.5rem",
+							fontWeight: "600",
+							textDecoration: "none",
+						}}
 					>
 						InSplash
 					</Link>
@@ -30,7 +34,10 @@ export default function Header({ section }) {
 					{section}
 				</div>
 				<div>
-					<a href="https://github.com">
+					<a
+						href="https://github.com/Carnifex04/InSplash"
+						style={{ textDecoration: "none" }}
+					>
 						<div>GitHub</div>
 					</a>
 				</div>
