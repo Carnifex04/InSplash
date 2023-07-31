@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import thumbsup from "../../public/thumbsup.svg";
 import Link from "next/link";
 
-export default function Card({
+export default function CardList({
 	creditUrl,
 	imgAlt = "placeholder",
 	imgSrc = "/placeholder.jpg",
@@ -44,34 +44,34 @@ export default function Card({
 				padding: "8px",
 				width: "100%",
 				backgroundColor: "#fff",
+				display: "flex", // Use flexbox to arrange elements in a row
+				alignItems: "center", // Vertically align elements to the center
 			}}
 			ref={cardRef}
 		>
+			{/* Left component (Image) */}
 			<div
-				href={creditUrl}
-				target="_blank"
-				style={{ textDecoration: "none" }}
+				style={{
+					width: "40%", // Set the width for the image
+					height: "20rem",
+					borderRadius: "20px",
+					overflow: "hidden",
+				}}
 			>
-				<div
+				<img
+					src={imgSrc}
+					alt={imgAlt}
 					style={{
 						width: "100%",
-						height: "24rem",
-						position: "relative",
-						overflow: "hidden",
-						borderRadius: "20px",
+						height: "100%",
+						objectFit: "cover",
 					}}
-				>
-					<img
-						src={imgSrc}
-						alt={imgAlt}
-						style={{
-							width: "100%",
-							height: "100%",
-							objectFit: "cover",
-						}}
-					/>
-				</div>
-				<div style={{ margin: "10px 0 0 14px" }}>
+				/>
+			</div>
+
+			{/* Right component (Information) */}
+			<div style={{ marginLeft: "20px", flexGrow: 1 }}>
+				<div style={{ margin: "10px 0 0 18px" }}>
 					{description ? description : alt_description}
 				</div>
 				<div
@@ -85,7 +85,7 @@ export default function Card({
 					<span style={{ fontWeight: "600" }}>{likes} ❤</span>
 					<Link
 						href={`/user/${username}`}
-						style={{ fontWeight: "600", textDecoration: "none" }}
+						style={{ fontWeight: "600" }}
 					>
 						{shotBy}
 					</Link>
