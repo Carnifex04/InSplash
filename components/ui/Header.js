@@ -18,9 +18,12 @@ export default function Header({ section }) {
 				}}
 			>
 				<div>
-					<div style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+					<Link
+						href="/"
+						style={{ fontSize: "1.5rem", fontWeight: "600" }}
+					>
 						InSplash
-					</div>
+					</Link>
 				</div>
 				<div style={{ fontSize: "1.5rem", fontWeight: "600" }}>
 					{section}
