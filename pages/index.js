@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import GridView from "../components/layouts/GridView/GridView";
+import ListView from "../components/layouts/ListView/ListView";
 import Card from "../components/ui/Card/Card";
 import Header from "../components/ui/Header/Header";
 
@@ -49,7 +49,7 @@ export default function Home() {
 
 			{/* Home */}
 			<Header section="Feed" />
-			<GridView>
+			<ListView>
 				{images.map((image, index) => (
 					<Card
 						key={image.id}
@@ -57,13 +57,15 @@ export default function Home() {
 						imgAlt={image.alt_description}
 						shotBy={image.user.name}
 						username={image.user.username}
+						description={image.description}
+						alt_description={image.alt_description}
 						creditUrl={image.links.html}
 						likes={image.likes}
 						isLast={index === images.length - 1}
 						newLimit={() => setPage(page + 1)}
 					/>
 				))}
-			</GridView>
+			</ListView>
 		</>
 	);
 }

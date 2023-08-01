@@ -1,12 +1,18 @@
-/* ListView.module.css */
+/* globals.css */
+
 .listViewContainer {
 	background-color: #f9fafb;
 	padding: 1rem;
 	gap: 1.25rem;
 	display: flex;
 	flex-direction: column;
-}
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	margin: 0 auto; /* Add this to center the container horizontally */
 
-#div {
-	background-color: "#f9fafb";
+	@media (max-width: 767px) {
+		/* For phone devices (max-width: 767px), set full width */
+		width: 90%;
+	}
 }

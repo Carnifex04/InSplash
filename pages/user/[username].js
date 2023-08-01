@@ -196,8 +196,6 @@ export default function ProfilePage() {
 							username={image.user.username}
 							likes={image.likes}
 							profilePhoto={image.user.profile_image.large}
-							description={image.description}
-							alt_description={image.alt_description}
 							isLast={index === images.length - 1}
 							newLimit={() => setPage(page + 1)}
 						/>
@@ -206,7 +204,7 @@ export default function ProfilePage() {
 			) : (
 				<ListView>
 					{images.map((image, index) => (
-						<CardList
+						<Card
 							key={image.id}
 							imgSrc={image.urls.regular}
 							imgAlt={image.alt_description}

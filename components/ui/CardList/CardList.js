@@ -3,7 +3,6 @@ import Link from "next/link";
 import styles from "./CardList.module.css";
 
 export default function CardList({
-	creditUrl,
 	imgAlt = "placeholder",
 	imgSrc = "/placeholder.jpg",
 	profileImage = "/placeholder.jpg",

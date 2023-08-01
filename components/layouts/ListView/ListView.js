@@ -2,7 +2,7 @@ import styles from "./ListView.module.css";
 
 export default function ListView({ children }) {
 	return (
-		<div id="div">
+		<div className={styles.container}>
 			<main className={styles.listViewContainer}>{children}</main>
 		</div>
 	);

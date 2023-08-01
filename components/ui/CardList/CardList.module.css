@@ -4,14 +4,15 @@
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	border-radius: 20px;
 	padding: 8px;
-	width: 100%;
+	width: 40%;
 	background-color: #fff;
 	display: flex;
 	align-items: center;
+	justify-items: center;
 }
 
 .imageContainer {
-	width: 40%;
+	width: 100%;
 	height: 20rem;
 	border-radius: 20px;
 	overflow: hidden;

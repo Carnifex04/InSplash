@@ -10,7 +10,7 @@ export default function Card({
 	shotBy,
 	username,
 	description,
-	alt_description,
+	alt_description = "",
 	likes,
 	newLimit,
 	isLast,

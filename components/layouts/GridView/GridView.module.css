@@ -1,21 +1,25 @@
-/* GridView.module.css */
+/* globals.css */
+
 .gridContainer {
 	background-color: #f9fafb;
 	padding: 1rem;
 	gap: 2rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-template-columns: repeat(
+		3,
+		minmax(150px, 1fr)
+	); /* Updated value here */
 }
 
-/* Media Queries for different screen sizes */
+/* Media Queries for different screen sizes
 @media (max-width: 1023px) {
 	.gridContainer {
-		grid-template-columns: repeat(2, minmax(280px, 1fr));
+		grid-template-columns: repeat(2, minmax(150px, 1fr));
 	}
 }
 
 @media (max-width: 767px) {
 	.gridContainer {
-		grid-template-columns: repeat(1, minmax(280px, 1fr));
+		grid-template-columns: repeat(1, minmax(150px, 1fr));
 	}
-}
+} */
