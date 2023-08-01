@@ -11,15 +11,14 @@
 	); /* Updated value here */
 }
 
-/* Media Queries for different screen sizes
-@media (max-width: 1023px) {
+/* @media (max-width: 1023px) {
+	.gridContainer {
+		grid-template-columns: repeat(2, minmax(150px, 1fr));
+	}
+} */
+
+@media (max-width: 767px) {
 	.gridContainer {
 		grid-template-columns: repeat(2, minmax(150px, 1fr));
 	}
 }
-
-@media (max-width: 767px) {
-	.gridContainer {
-		grid-template-columns: repeat(1, minmax(150px, 1fr));
-	}
-} */
