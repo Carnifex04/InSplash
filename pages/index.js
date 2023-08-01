@@ -52,6 +52,7 @@ export default function Home() {
 						creditUrl={image.links.html}
 						likes={image.likes}
 						viewType="list"
+						section="feed"
 						isLast={index === images.length - 1}
 						newLimit={() => setPage(page + 1)}
 					/>

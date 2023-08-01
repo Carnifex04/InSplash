@@ -13,6 +13,7 @@ export default function Card({
 	alt_description = "",
 	likes,
 	viewType = "grid",
+	section = "profile",
 	newLimit,
 	isLast,
 }) {
@@ -40,7 +41,7 @@ export default function Card({
 			>
 				<div
 					className={`${styles.imageContainer} ${
-						viewType === "grid" ? styles.gridCard : ""
+						viewType === "grid" ? styles.gridCardImage : ""
 					}`}
 				>
 					<img
@@ -49,9 +50,14 @@ export default function Card({
 						alt={imgAlt}
 					/>
 				</div>
-				<div className={styles.cardDescription}>
-					{description ? description : alt_description}
-				</div>
+				{section !== "profile" ? (
+					<div className={styles.cardDescription}>
+						{description ? description : alt_description}
+					</div>
+				) : (
+					<div></div>
+				)}
+
 				<div className={styles.likesUsernameContainer}>
 					<span className={styles.likesText}>{likes} ❤</span>
 					<Link
