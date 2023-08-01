@@ -12,6 +12,7 @@ export default function Card({
 	description,
 	alt_description = "",
 	likes,
+	viewType = "grid",
 	newLimit,
 	isLast,
 }) {
@@ -37,7 +38,11 @@ export default function Card({
 				target="_blank"
 				style={{ textDecoration: "none" }}
 			>
-				<div className={styles.imageContainer}>
+				<div
+					className={`${styles.imageContainer} ${
+						viewType === "grid" ? styles.gridCard : ""
+					}`}
+				>
 					<img
 						className={styles.cardImage}
 						src={imgSrc}

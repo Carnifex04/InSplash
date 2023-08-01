@@ -51,6 +51,7 @@ export default function Home() {
 						alt_description={image.alt_description}
 						creditUrl={image.links.html}
 						likes={image.likes}
+						viewType="list"
 						isLast={index === images.length - 1}
 						newLimit={() => setPage(page + 1)}
 					/>

@@ -182,6 +182,7 @@ export default function ProfilePage() {
 							username={image.user.username}
 							likes={image.likes}
 							profilePhoto={image.user.profile_image.large}
+							viewType="grid"
 							isLast={index === images.length - 1}
 							newLimit={() => setPage(page + 1)}
 						/>
@@ -199,6 +200,7 @@ export default function ProfilePage() {
 							profilePhoto={image.user.profile_image.large}
 							description={image.description}
 							alt_description={image.alt_description}
+							viewType="list"
 							isLast={index === images.length - 1}
 							newLimit={() => setPage(page + 1)}
 						/>
