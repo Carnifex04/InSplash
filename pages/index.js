@@ -28,7 +28,7 @@ export default function Home() {
 	}, [page]);
 
 	return (
-		<>
+		<div className="main-container">
 			<Head>
 				<title>InSplash</title>
 				<meta
@@ -56,6 +56,6 @@ export default function Home() {
 					/>
 				))}
 			</ListView>
-		</>
+		</div>
 	);
 }

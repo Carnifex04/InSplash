@@ -1,12 +1,9 @@
-/* header.module.css */
-
 .headerContainer {
 	padding: 1rem;
-	padding-left: 2rem;
 	position: sticky;
 	top: 0;
-	background-color: #c7cbcb;
 	z-index: 50;
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
 }
 
 .navContainer {

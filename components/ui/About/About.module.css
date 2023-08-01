@@ -1,6 +1,6 @@
 .aboutContainer {
 	width: 50%;
-	margin: 20px auto;
+	margin: 1.25rem auto;
 	display: flex;
 	justify-content: center;
 }
@@ -8,10 +8,24 @@
 .profileImage {
 	border-radius: 25%;
 	background-color: #ccc;
+	width: 12rem;
+	height: 12rem;
+}
+@media (max-width: 767px) {
+	.profileImage {
+		width: 10rem;
+		height: 10rem;
+	}
+}
+@media (max-width: 550px) {
+	.profileImage {
+		width: 8rem;
+		height: 8rem;
+	}
 }
 
 .profileInfo {
-	width: 40%;
+	/* width: 40%; */
 	margin-top: 20px;
 	margin-left: 40px;
 }
@@ -29,7 +43,7 @@
 .locationInfo {
 	margin-top: 24px;
 	font-size: 14px;
-	opacity: 0.5;
+
 	display: flex;
 	align-items: center;
 }
@@ -37,7 +51,7 @@
 .instagramInfo {
 	margin-top: 12px;
 	font-size: 14px;
-	opacity: 0.5;
+
 	display: flex;
 	align-items: center;
 }
@@ -46,7 +60,6 @@
 	display: flex;
 	margin-top: 12px;
 	font-size: 14px;
-	opacity: 0.5;
 }
 
 .profileStat {

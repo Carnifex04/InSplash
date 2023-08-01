@@ -72,7 +72,7 @@ export default function ProfilePage() {
 	}, [page]);
 
 	return (
-		<>
+		<div className="main-container">
 			<Head>
 				<title>InSplash</title>
 				<meta
@@ -180,8 +180,6 @@ export default function ProfilePage() {
 							imgSrc={image.urls.regular}
 							imgAlt={image.alt_description}
 							username={image.user.username}
-							description={image.description}
-							alt_description={image.alt_description}
 							likes={image.likes}
 							profilePhoto={image.user.profile_image.large}
 							isLast={index === images.length - 1}
@@ -207,6 +205,6 @@ export default function ProfilePage() {
 					))}
 				</ListView>
 			)}
-		</>
+		</div>
 	);
 }
