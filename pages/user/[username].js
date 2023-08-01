@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import GridView from "../../components/layouts/GridView";
-import ListView from "../../components/layouts/ListView";
-import Card from "../../components/ui/Card";
-import CardList from "../../components/ui/CardList";
-import About from "../../components/ui/About";
-import Header from "../../components/ui/Header";
+import GridView from "../../components/layouts/GridView/GridView";
+import ListView from "../../components/layouts/ListView/ListView";
+import Card from "../../components/ui/Card/Card";
+import CardList from "../../components/ui/CardList/CardList";
+import About from "../../components/ui/About/About";
+import Header from "../../components/ui/Header/Header";
 
 const BASE_URL = `https://api.unsplash.com/users/`;
 
@@ -43,6 +43,7 @@ export default function ProfilePage() {
 		if (data) {
 			{
 				setInfo(data);
+				//console.log(info);
 			}
 		} else {
 			console.error("Error: Invalid response data or results not found.");
@@ -106,6 +107,7 @@ export default function ProfilePage() {
 				likes={info.total_likes}
 				total_photos={info.total_photos}
 				followers={info.followers_count}
+				profilePhoto={info?.profile_image?.large}
 			/>
 
 			<button

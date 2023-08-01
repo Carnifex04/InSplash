@@ -1,0 +1,31 @@
+/* header.module.css */
+
+.headerContainer {
+	padding: 1rem;
+	padding-left: 2rem;
+	position: sticky;
+	top: 0;
+	background-color: #c7cbcb;
+	z-index: 50;
+}
+
+.navContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logoLink {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.sectionText {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.githubLink {
+	text-decoration: none;
+}

@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import GridView from "../components/layouts/GridView";
-import Card from "../components/ui/Card";
-import Header from "../components/ui/Header";
+import GridView from "../components/layouts/GridView/GridView";
+import Card from "../components/ui/Card/Card";
+import Header from "../components/ui/Header/Header";
 
 const BASE_URL = `https://api.unsplash.com/photos/random`;
 

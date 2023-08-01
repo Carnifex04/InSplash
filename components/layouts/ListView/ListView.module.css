@@ -1,0 +1,12 @@
+/* ListView.module.css */
+.listViewContainer {
+	background-color: #f9fafb;
+	padding: 1rem;
+	gap: 1.25rem;
+	display: flex;
+	flex-direction: column;
+}
+
+#div {
+	background-color: "#f9fafb";
+}

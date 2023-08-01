@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import thumbsup from "../../public/thumbsup.svg";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "./About.module.css";
 
 export default function About({
 	profilePhoto,
@@ -14,47 +14,18 @@ export default function About({
 	followers,
 }) {
 	return (
-		<div
-			style={{
-				width: "50%",
-				margin: "20px auto",
-				display: "flex",
-				justifyContent: "center",
-			}}
-		>
+		<div className={styles.aboutContainer}>
 			<Image
-				style={{
-					borderRadius: "50%",
-					backgroundColor: "#ccc",
-				}}
-				src="https://images.unsplash.com/profile-1671472022314-481c8d4857b3image?ixlib=rb-4.0.3&crop=faces&fit=crop&w=128&h=128"
+				className={styles.profileImage}
+				src={profilePhoto}
 				width={200}
 				height={200}
 				alt="Picture of the author"
 			/>
-			<div
-				style={{ width: "auto", marginTop: "20px", marginLeft: "40px" }}
-			>
-				<div style={{ fontWeight: "600", fontSize: "42px" }}>
-					{name}
-				</div>
-				<div
-					style={{
-						marginTop: "24px",
-						fontSize: "18px",
-					}}
-				>
-					{bio}
-				</div>
-				<div
-					style={{
-						marginTop: "24px",
-						fontSize: "14px",
-						opacity: 0.5, // Reduced opacity (adjust as needed)
-						display: "flex",
-						alignItems: "center",
-					}}
-				>
+			<div className={styles.profileInfo}>
+				<div className={styles.profileName}>{name}</div>
+				<div className={styles.profileBio}>{bio}</div>
+				<div className={styles.locationInfo}>
 					<svg
 						width="14"
 						height="14"
@@ -70,13 +41,7 @@ export default function About({
 				</div>
 				<Link
 					href={`https://instagram.com/${instagramID}`}
-					style={{
-						marginTop: "12px",
-						fontSize: "14px",
-						opacity: 0.5, // Reduced opacity (adjust as needed)
-						display: "flex",
-						alignItems: "center",
-					}}
+					className={styles.instagramInfo}
 				>
 					<svg
 						width="14"
@@ -91,22 +56,8 @@ export default function About({
 					</svg>
 					<span style={{ marginLeft: "10px" }}>{instagramID}</span>
 				</Link>
-				<div
-					style={{
-						display: "flex",
-						marginTop: "12px",
-						fontSize: "14px",
-						opacity: 0.5,
-					}}
-				>
-					{/* First child div */}
-					<div
-						style={{
-							flexBasis: "69px",
-							display: "flex",
-							alignItems: "center",
-						}}
-					>
+				<div className={styles.profileStats}>
+					<div className={styles.profileStat}>
 						<svg
 							style={{ marginRight: "8px" }}
 							width="14"
@@ -123,13 +74,7 @@ export default function About({
 					</div>
 
 					{/* Second child div */}
-					<div
-						style={{
-							flexBasis: "69px",
-							display: "flex",
-							alignItems: "center",
-						}}
-					>
+					<div className={styles.profileStat}>
 						<svg
 							style={{ marginRight: "8px" }}
 							width="14"
@@ -146,13 +91,7 @@ export default function About({
 					</div>
 
 					{/* Third child div */}
-					<div
-						style={{
-							flexBasis: "69px",
-							display: "flex",
-							alignItems: "center",
-						}}
-					>
+					<div className={styles.profileStat}>
 						<svg
 							style={{ marginRight: "8px" }}
 							width="14"
