@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import GridView from "../../components/layouts/GridView/GridView";
 import ListView from "../../components/layouts/ListView/ListView";
 import Card from "../../components/ui/Card/Card";
-import CardList from "../../components/ui/CardList/CardList";
 import About from "../../components/ui/About/About";
 import Header from "../../components/ui/Header/Header";
 
@@ -13,21 +12,15 @@ const BASE_URL = `https://api.unsplash.com/users/`;
 export default function ProfilePage() {
 	const router = useRouter();
 	const { username } = router.query;
-	// ------- States -------
 	const [images, setImages] = useState([]);
 	const [page, setPage] = useState(1);
-	//const [profileImage, setProfileImage] = useState("/placeholder.jpg");
 	const [info, setInfo] = useState([]);
 	const [isGridView, setIsGridView] = useState(true);
 
 	// useEffect(() => {
 	// 	console.log("Profile Image Updated:", profileImage);
 	// }, [profileImage]);
-	// ------- Functions -------
-	/**
-	 * Fetch images from the Unsplash API and append the results to your `images` array
-	 *
-	 */
+
 	const toggleViewMode = () => {
 		setIsGridView((prev) => !prev);
 	};
@@ -43,7 +36,6 @@ export default function ProfilePage() {
 		if (data) {
 			{
 				setInfo(data);
-				//console.log(info);
 			}
 		} else {
 			console.error("Error: Invalid response data or results not found.");
@@ -65,14 +57,11 @@ export default function ProfilePage() {
 
 	// useEffect(() => {
 	// 	if (username) {
-	// 		// Fetch user profile information when the username is availabl
+	//
 	// 		fetchImages();
 	// 	}
 	// }, [username, page]);
 
-	/**
-	 * useEffect to trigger the `fetchImages` function whenever `page` updates
-	 */
 	useEffect(() => {
 		fetchUserInfo();
 		console.log(1);
@@ -82,7 +71,6 @@ export default function ProfilePage() {
 		fetchImages();
 	}, [page]);
 
-	// ------- Render -------
 	return (
 		<>
 			<Head>
@@ -93,8 +81,6 @@ export default function ProfilePage() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
-			{/* Home */}
 
 			<Header section="Profile" />
 
@@ -112,10 +98,10 @@ export default function ProfilePage() {
 
 			<button
 				style={{
-					background: "none", // Set the background to none
-					border: "none", // Remove the border
-					cursor: "pointer", // Show pointer cursor on hover
-					padding: 0, // Remove padding
+					background: "none",
+					border: "none",
+					cursor: "pointer",
+					padding: 0,
 					marginLeft: "20px",
 				}}
 				onClick={toggleViewMode}
@@ -194,6 +180,8 @@ export default function ProfilePage() {
 							imgSrc={image.urls.regular}
 							imgAlt={image.alt_description}
 							username={image.user.username}
+							description={image.description}
+							alt_description={image.alt_description}
 							likes={image.likes}
 							profilePhoto={image.user.profile_image.large}
 							isLast={index === images.length - 1}

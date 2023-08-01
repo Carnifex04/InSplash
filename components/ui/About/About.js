@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./About.module.css";
@@ -73,7 +72,6 @@ export default function About({
 						{total_photos}
 					</div>
 
-					{/* Second child div */}
 					<div className={styles.profileStat}>
 						<svg
 							style={{ marginRight: "8px" }}
@@ -90,7 +88,6 @@ export default function About({
 						{likes}
 					</div>
 
-					{/* Third child div */}
 					<div className={styles.profileStat}>
 						<svg
 							style={{ marginRight: "8px" }}

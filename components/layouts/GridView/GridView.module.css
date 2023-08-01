@@ -1,14 +1,9 @@
-/* globals.css */
-
 .gridContainer {
 	background-color: #f9fafb;
 	padding: 1rem;
 	gap: 2rem;
 	display: grid;
-	grid-template-columns: repeat(
-		3,
-		minmax(150px, 1fr)
-	); /* Updated value here */
+	grid-template-columns: repeat(3, minmax(150px, 1fr));
 }
 
 /* @media (max-width: 1023px) {

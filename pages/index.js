@@ -7,14 +7,9 @@ import Header from "../components/ui/Header/Header";
 const BASE_URL = `https://api.unsplash.com/photos/random`;
 
 export default function Home() {
-	// ------- States -------
 	const [images, setImages] = useState([]);
 	const [page, setPage] = useState(1);
 
-	// ------- Functions -------
-	/**
-	 * Fetch images from the Unsplash API and append the results to your `images` array
-	 */
 	const fetchImages = async () => {
 		const response = await fetch(
 			`${BASE_URL}?count=10&page=${page}&client_id=${process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY}`
@@ -28,14 +23,10 @@ export default function Home() {
 		}
 	};
 
-	/**
-	 * useEffect to trigger the `fetchImages` function whenever `page` updates
-	 */
 	useEffect(() => {
 		fetchImages();
 	}, [page]);
 
-	// ------- Render -------
 	return (
 		<>
 			<Head>
@@ -47,7 +38,6 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			{/* Home */}
 			<Header section="Feed" />
 			<ListView>
 				{images.map((image, index) => (
