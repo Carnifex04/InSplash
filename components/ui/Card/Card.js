@@ -17,7 +17,6 @@ export default function Card({
 	newLimit,
 	isLast,
 }) {
-	const [isLoaded, setLoaded] = useState(false);
 	const cardRef = useRef();
 
 	useEffect(() => {
@@ -45,14 +44,7 @@ export default function Card({
 						viewType === "grid" ? styles.gridCardImage : ""
 					}`}
 				>
-					<img
-						className={styles.cardImage}
-						src={imgSrc}
-						onLoad={() => setLoaded(true)}
-					/>
-					{!isLoaded && (
-						<Blurhash hash={blurHash} width="100%" height="100%" />
-					)}
+					<img className={styles.cardImage} src={imgSrc} />
 				</div>
 				{section !== "profile" ? (
 					<div className={styles.cardDescription}>
