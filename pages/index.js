@@ -45,6 +45,7 @@ export default function Home() {
 						key={image.id}
 						imgSrc={image.urls.regular}
 						imgAlt={image.alt_description}
+						blurHash={image.blur_hash}
 						shotBy={image.user.name}
 						username={image.user.username}
 						description={image.description}

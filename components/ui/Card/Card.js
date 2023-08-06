@@ -1,12 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./Card.module.css";
+import { Blurhash } from "react-blurhash";
 
 export default function Card({
 	creditUrl,
-	imgAlt = "placeholder",
 	imgSrc = "/placeholder.jpg",
-	profileImage = "/placeholder.jpg",
+	blurHash,
 	shotBy,
 	username,
 	description,
@@ -17,6 +17,7 @@ export default function Card({
 	newLimit,
 	isLast,
 }) {
+	const [isLoaded, setLoaded] = useState(false);
 	const cardRef = useRef();
 
 	useEffect(() => {
@@ -47,8 +48,11 @@ export default function Card({
 					<img
 						className={styles.cardImage}
 						src={imgSrc}
-						alt={imgAlt}
+						onLoad={() => setLoaded(true)}
 					/>
+					{!isLoaded && (
+						<Blurhash hash={blurHash} width="100%" height="100%" />
+					)}
 				</div>
 				{section !== "profile" ? (
 					<div className={styles.cardDescription}>
