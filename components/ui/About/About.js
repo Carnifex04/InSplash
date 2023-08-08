@@ -47,7 +47,7 @@ export default function About({
 						<svg
 							width="14"
 							height="14"
-							class="VRrV5"
+							//class="VRrV5"
 							viewBox="0 0 24 24"
 							version="1.1"
 							aria-hidden="false"
@@ -69,7 +69,7 @@ export default function About({
 							style={{ marginRight: "8px" }}
 							width="14"
 							height="14"
-							class="Gdg38"
+							//class="Gdg38"
 							viewBox="0 0 24 24"
 							version="1.1"
 							aria-hidden="false"
@@ -85,7 +85,7 @@ export default function About({
 							style={{ marginRight: "8px" }}
 							width="14"
 							height="14"
-							class="Gdg38"
+							//class="Gdg38"
 							viewBox="0 0 24 24"
 							version="1.1"
 							aria-hidden="false"
